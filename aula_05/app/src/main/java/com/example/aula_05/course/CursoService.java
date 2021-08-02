@@ -1,6 +1,4 @@
-package com.example.aula_05;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+package com.example.aula_05.course;
 
 import java.util.List;
 

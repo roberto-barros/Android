@@ -4,54 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F3EFEF"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edBuscar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Digite um ID"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-
-    <Button
-        android:id="@+id/btBuscar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Buscar"
-        android:textSize="20sp"
-        android:onClick="getById"
-        app:layout_constraintTop_toBottomOf="@id/edBuscar"
-        />
-
-    <Button
-        android:id="@+id/btBuscarTodos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Buscar Todos"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/btBuscar"
-        android:onClick="getAll"
-        />
-
-<androidx.core.widget.NestedScrollView
-    android:foregroundGravity="center"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/btBuscarTodos">
 
     <TextView
-        android:id="@+id/tvCursos"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text=""
-        android:textSize="30sp"
+        android:id="@+id/tvMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MENU PRINCIPAL"
+        android:textSize="40sp"
+        android:background="#2196F3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+
+
         />
-</androidx.core.widget.NestedScrollView>
+
+    <ImageButton
+        android:id="@+id/imCourses"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/cursos"
+        app:layout_constraintTop_toBottomOf="@id/tvMain"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="switchToCourseView"
+        />
+
+    <ImageButton
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/departamentos"
+        app:layout_constraintTop_toBottomOf="@id/tvMain"
+        app:layout_constraintStart_toEndOf="@id/imCourses"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="switchToDepartmentView"
+        />
 
 
 

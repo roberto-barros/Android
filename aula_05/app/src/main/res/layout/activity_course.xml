@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".course.CourseActivity">
+
+    <EditText
+        android:id="@+id/edFindCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o ID do Curso"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btGetCourseById"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:textSize="20sp"
+        android:onClick="getCourseById"
+        app:layout_constraintTop_toBottomOf="@id/edFindCourse"
+        />
+
+    <Button
+        android:id="@+id/btGetAllCourses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar Todos"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btGetCourseById"
+        android:onClick="getAllCourses"
+        />
+
+    <Button
+        android:id="@+id/btCreateCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Curso"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btGetAllCourses"
+        android:onClick="createCourse"
+        />
+
+    <Button
+        android:id="@+id/btUpdateCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Atualizar Curso"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btCreateCourse"
+        android:onClick="updateCourse"
+        />
+
+    <Button
+        android:id="@+id/btDeleteCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deletar"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btUpdateCourse"
+        android:onClick="deleteCourse"
+        />
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btDeleteCourse">
+
+        <TextView
+            android:id="@+id/tvCourses"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text=""
+            android:textSize="30sp"
+            />
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

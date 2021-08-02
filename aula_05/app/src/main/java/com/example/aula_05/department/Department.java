@@ -1,12 +1,15 @@
-package com.example.aula_05;
+package com.example.aula_05.department;
+
+import android.renderscript.Allocation;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties("allocations")
-public class Curso {
+public class Department {
 
     private int id;
     private String name;
+    private Allocation allocations;
 
     public int getId() {
         return id;
@@ -22,5 +25,13 @@ public class Curso {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Allocation getAllocations() {
+        return allocations;
+    }
+
+    public void setAllocations(Allocation allocations) {
+        this.allocations = allocations;
     }
 }
